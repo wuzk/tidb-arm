@@ -70,7 +70,7 @@ source /etc/profile
 grafana-6.1.6.tar.gz  spark-2.3.2-bin-hadoop2.7.tgz拷贝进去。
 
  编辑 inventory.ini
-## TiDB Cluster Part
+## TiDB Cluster Part
 [tidb_servers]
 192.168.1.1
 
@@ -170,13 +170,13 @@ collect_log_recent_hours = 2
 enable_bandwidth_limit = True
 # default: 10Mb/s, unit: Kbit/s
 collect_bandwidth_limit = 10000
-
+
 
 3.初始化系统环境，修改内核参数
    执行前需要调整ansible.cfg 的timeout = 60 默认是10
 
   修改/home/tidb/tidb-ansible/roles/check_system_static/tasks/main.yml去掉，屏蔽掉：
-- name: Deploy epollexclusive script
+- name: Deploy epollexclusive script
   copy: src="{{ script_dir }}/check/epollexclusive" dest="{{ deploy_dir }}/epollexclusive" mode=0755
 
 - name: Preflight check - Check if the operating system supports EPOLLEXCLUSIVE
