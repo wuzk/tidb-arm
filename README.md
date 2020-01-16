@@ -1,3 +1,11 @@
+写在前面:
+
+编译的环境centos7.5
+本文档包含了编译时需要的包（ansible_pkg）,编译后的文件（build），和其他的包（downloads）
+将（fio）下面的包复制到tikv机器的/usr/lib64目录下
+由于编译后的文件太大，无法上传到git，上传到了百度网盘上连接地址：
+https://pan.baidu.com/s/1ymWZWrDzY66FJVLS9WxPzQ
+
 一、下载依赖包：
 
 机器要联网
